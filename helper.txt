@@ -1,0 +1,9 @@
+# copy new files
+rsync -avh radioactive_decay /usr/local/src/geant4.10.00/source/processes/hadronic/models/
+rsync -avh photon_evaporation /usr/local/src/geant4.10.00/source/processes/hadronic/models/de_excitation/
+
+# rebuild and install Geant4
+cd /usr/local/src/build
+
+make -j2
+make install
